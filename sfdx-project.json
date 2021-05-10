@@ -1,0 +1,12 @@
+{
+    "packageDirectories": [
+        {
+            "path": "src",
+            "default": true
+        }
+    ],
+    "name": "picklist-utils",
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "51.0"
+}
