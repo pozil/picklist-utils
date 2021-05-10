@@ -28,11 +28,7 @@ global with sharing class PicklistUtils {
         List<Schema.PicklistEntry> entries = apexCache.get(cacheKey);
         if (entries == null) {
             // Get picklist values
-            entries = sObjectType.getDescribe()
-                .fields.getMap()
-                .get(String.valueOf(field))
-                ?.getDescribe()
-                ?.getPicklistValues();
+            entries = field.getPicklistValues();
             // Exclude inactive picklist values
             entries = getActivePicklistEntries(entries);
             // Cache entries
