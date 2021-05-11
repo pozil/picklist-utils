@@ -1,6 +1,12 @@
+[![CI Workflow](https://github.com/pozil/picklist-utils/workflows/CI/badge.svg)](https://github.com/pozil/picklist-utils/actions?query=workflow%3ACI) [![Packaging Workflow](https://github.com/pozil/picklist-utils/workflows/Packaging/badge.svg)](https://github.com/pozil/picklist-utils/actions?query=workflow%3APackaging) [![codecov](https://codecov.io/gh/pozil/picklist-utils/branch/main/graph/badge.svg)](https://codecov.io/gh/pozil/picklist-utils)
+
 # PicklistUtils
 
 Apex utility class for working with Picklists with built-in cache.
+
+Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t3h000004smn8AAA) to install the PicklistUtils unlocked package in your org.
+
+Reference:
 
 1. [Working without record types](#working-without-record-types)
     1. Working with object and field references
