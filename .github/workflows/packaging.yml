@@ -88,7 +88,11 @@ jobs:
 
             # Commit and push changes
             - name: 'Commit and push changes'
-              run: git commit -a -m "Released new package version" && git push
+              run: |
+                  git config --global user.name 'pozil'
+                  git config --global user.email 'pozil@users.noreply.github.com'
+                  git commit -a -m "Released new package version"
+                  git push
 
             # Install SPM plugin
             - name: 'Install SPM plugin'
