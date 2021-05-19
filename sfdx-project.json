@@ -13,6 +13,7 @@
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "51.0",
     "packageAliases": {
-        "PicklistUtils": "0Ho5e000000wkBXCAY"
+        "PicklistUtils": "0Ho5e000000wkBXCAY",
+        "PicklistUtils@1.1.0-2": "04t5e000000MBlKAAW"
     }
 }
