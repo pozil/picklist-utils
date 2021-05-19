@@ -11,5 +11,8 @@
     "name": "PicklistUtils",
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "51.0"
+    "sourceApiVersion": "51.0",
+    "packageAliases": {
+        "PicklistUtils": "0Ho5p000000TN23CAG"
+    }
 }
