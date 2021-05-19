@@ -86,6 +86,14 @@ jobs:
             - name: 'Commit and push changes'
               run: git commit -a -m "Released new package version" && git push
 
+            # Install SPM plugin
+            - name: 'Install SPM plugin'
+              run: echo y | sfdx plugins:install spm-plugin
+
+            # Publish package to SPM registry
+            - name: 'Install SPM plugin'
+              run: sfdx spm:publish -v ${{ steps.createPackageVersion.outputs.packageVersionId }}
+
             # Housekeeping
             - name: 'Delete scratch org'
               if: always()
