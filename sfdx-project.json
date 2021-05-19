@@ -3,12 +3,12 @@
         {
             "path": "src",
             "default": true,
-            "package": "picklist-utils",
+            "package": "PicklistUtils",
             "versionName": "Initial version",
             "versionNumber": "1.0.0.NEXT"
         }
     ],
-    "name": "picklist-utils",
+    "name": "PicklistUtils",
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "51.0"
