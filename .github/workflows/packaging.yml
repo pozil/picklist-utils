@@ -45,7 +45,7 @@ jobs:
               id: createPackageVersion
               run: |
                   set +e
-                  json=$(sfdx force:package:version:create -p PicklistUtils -x -w 20 -f config/project-scratch-def.json --json)
+                  json=$(sfdx force:package:version:create -p PicklistUtils -c -x -w 20 -f config/project-scratch-def.json --json)
                   echo $json
                   status=$(echo $json | jq '.status')
                   if [ $status == "0" ]; then
@@ -77,6 +77,10 @@ jobs:
                   packageLinkRegex="https:\/\/login\.salesforce\.com\/packaging\/installPackage\.apexp\?p0=[a-zA-ZA-ZA-Z0-9]{18}"
                   newPackageLink="https://login.salesforce.com/packaging/installPackage.apexp?p0=${packageVersionId}"
                   sed -E -i "s,${packageLinkRegex},${newPackageLink}," README.md
+
+            # Run Apex tests in scratch org
+            - name: 'Run Apex tests'
+              run: sfdx force:apex:test:run -c -r human -d ./tests/apex -w 20
 
             # Promote package version
             - name: 'Promote package version'
