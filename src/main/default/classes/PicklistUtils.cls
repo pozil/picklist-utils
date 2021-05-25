@@ -8,6 +8,9 @@ global with sharing class PicklistUtils {
     // Cache for UI API calls
     private final static Map<String, PicklistEntries> uiApiCache = new Map<String, PicklistEntries>();
 
+    // Cache for case status values
+    private static List<CaseStatus> caseStatuses;
+
     /*
      * Retrieves picklist values for a given object and field
      * This method uses dynamic Apex and does not support record types.
@@ -143,6 +146,35 @@ global with sharing class PicklistUtils {
         }
 
         return entries;
+    }
+
+    /**
+     * Gets all case status values for both closed AND open cases
+     */
+    global static List<CaseStatus> getCaseStatusValues() {
+        if (caseStatuses == null) {
+            caseStatuses = [
+                SELECT Id, MasterLabel, IsClosed, SortOrder, ApiName, IsDefault
+                FROM CaseStatus
+                ORDER BY SortOrder ASC
+            ];
+        }
+        return caseStatuses;
+    }
+
+    /**
+     * Gets case status values for closed OR open cases
+     * @param isCaseClosed whether to return values for open cases or closed cases
+     */
+    global static List<CaseStatus> getCaseStatusValues(Boolean isCaseClosed) {
+        List<CaseStatus> allValues = getCaseStatusValues();
+        List<CaseStatus> requestedValues = new List<CaseStatus>();
+        for (CaseStatus value : allValues) {
+            if (value.IsClosed == isCaseClosed) {
+                requestedValues.add(value);
+            }
+        }
+        return requestedValues;
     }
 
     /**

@@ -4,8 +4,9 @@
             "path": "src",
             "default": true,
             "package": "PicklistUtils",
-            "versionName": "Initial version",
-            "versionNumber": "1.1.0.NEXT"
+            "versionName": "Working with case statuses",
+            "versionNumber": "1.2.0.NEXT",
+            "ancestorVersion": "1.1.0.2"
         }
     ],
     "name": "PicklistUtils",

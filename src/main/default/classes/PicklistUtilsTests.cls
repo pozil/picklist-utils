@@ -104,6 +104,30 @@ global class PicklistUtilsTests {
         Test.stopTest();
     }
 
+    @isTest
+    static void getCaseStatusValues_works_with_closed_cases() {
+        Test.startTest();
+        Integer count = database.countQuery(
+            'SELECT COUNT() FROM CaseStatus WHERE IsClosed=true'
+        );
+        List<CaseStatus> values = PicklistUtils.getCaseStatusValues(true);
+        Test.stopTest();
+
+        System.assertEquals(count, values.size());
+    }
+
+    @isTest
+    static void getCaseStatusValues_works_with_open_cases() {
+        Test.startTest();
+        Integer count = database.countQuery(
+            'SELECT COUNT() FROM CaseStatus WHERE IsClosed=false'
+        );
+        List<CaseStatus> values = PicklistUtils.getCaseStatusValues(false);
+        Test.stopTest();
+
+        System.assertEquals(count, values.size());
+    }
+
     public class MockSimpleHttpResponse implements HttpCalloutMock {
         private Integer statusCode;
         private String body;
