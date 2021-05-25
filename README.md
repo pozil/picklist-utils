@@ -4,7 +4,7 @@
 
 Apex utility class for working with Picklists with built-in cache.
 
-Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5e000000MBlKAAW) to install the PicklistUtils unlocked package in your org.
+Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5e000000MIe8AAG) to install the PicklistUtils unlocked package in your org.
 
 Reference:
 
