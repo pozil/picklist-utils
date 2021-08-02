@@ -131,13 +131,12 @@ global with sharing class PicklistUtils {
                     // Cache entries
                     uiApiCache.put(requestUrl, entries);
                 } else {
-                    System.debug(
+                    throw new CalloutException(
                         'HTTP ' +
                         httpResponse.getStatusCode() +
-                        ' while calling UI API, Response ' +
+                        ' while calling UI API, Response: ' +
                         httpResponse.getBody()
                     );
-                    throw new CalloutException(httpResponse.getBody());
                 }
             } catch (System.Exception e) {
                 System.debug('ERROR: ' + e);
