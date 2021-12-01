@@ -13,7 +13,7 @@
         "@prettier/plugin-xml": "^1.1.0",
         "husky": "^7.0.4",
         "lint-staged": "^11.2.6",
-        "prettier": "^2.4.1",
+        "prettier": "^2.5.0",
         "prettier-plugin-apex": "^1.10.0",
         "semver": "^7.3.5"
     },
