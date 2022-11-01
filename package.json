@@ -15,7 +15,7 @@
         "lint-staged": "^13.0.3",
         "prettier": "^2.7.1",
         "prettier-plugin-apex": "^1.11.0",
-        "semver": "^7.3.7"
+        "semver": "^7.3.8"
     },
     "lint-staged": {
         "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
