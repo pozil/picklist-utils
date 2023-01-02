@@ -70,9 +70,9 @@ global with sharing class PicklistUtils {
                 );
                 e.setMessage(
                     'Could not find field ' +
-                    fieldName +
-                    ' on object ' +
-                    objectName
+                        fieldName +
+                        ' on object ' +
+                        objectName
                 );
                 throw e;
             }
@@ -133,9 +133,9 @@ global with sharing class PicklistUtils {
                 } else {
                     throw new CalloutException(
                         'HTTP ' +
-                        httpResponse.getStatusCode() +
-                        ' while calling UI API, Response: ' +
-                        httpResponse.getBody()
+                            httpResponse.getStatusCode() +
+                            ' while calling UI API, Response: ' +
+                            httpResponse.getBody()
                     );
                 }
             } catch (System.Exception e) {
